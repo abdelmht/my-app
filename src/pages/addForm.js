@@ -6,13 +6,10 @@ export default function Ajouter() {
     const [actions, setActions] = useState([]);
 
     const AjoutF = (action) => {
-        setActions((prev) => {
-            return [...prev , action]
-        });
-
-        // state dans navigate permet d'envoyer des donnes dans une autre page
+        setActions((prev) => [...prev , action]);
+        // state dans navigate permet d'envoyer des donnes dans une atre
         navigate('/aPropos' , { state : {  actions : actions , auteur : "Diùmancje" }})
-*
+
         console.log('Fonction AjoutF appelée depuis le composant parent :', action);
     };
     const [formData, setFormData] = useState({
